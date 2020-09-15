@@ -32,7 +32,7 @@ class NeuralConfiguration(object):
         model = Sequential()
         model.add(Dense(16, input_dim=8, activation="relu"))
         model.add(Dense(8, activation="relu"))
-        model.add(Dense(1, activation="softmax"))
+        model.add(Dense(1, activation="sigmoid"))
 
         print("Adding Optimizer in the Model.")
         model.compile(loss="binary_crossentropy", optimizer="adam", metrics=["accuracy"])
